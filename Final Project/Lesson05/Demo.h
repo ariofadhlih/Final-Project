@@ -13,16 +13,19 @@ public:
 	Demo();
 	~Demo();
 private:
-	GLuint shaderProgram, VBO, VAO, EBO, texture, VBO2, VAO2, EBO2, texture2;
+	GLuint shaderProgram, VBO, VAO, EBO, texture, VBO2, VAO2, EBO2, texture2, texture3, texture4;
 	float angle = 0;
 	virtual void Init();
 	virtual void DeInit();
 	virtual void Update(double deltaTime);
 	virtual void Render();
-	virtual void ProcessInput(GLFWwindow *window);
+	virtual void ProcessInput(GLFWwindow* window);
 	void BuildColoredCube();
 	void BuildColoredPlane();
+	void BuildColoredMarka();
+	void BuildColoredMoon();
 	void DrawColoredCube(int rotate, float positionX, float positionY, float positionZ, float scaleX, float scaleY, float scaleZ);
 	void DrawColoredPlane();
+	void DrawColoredMarka(int rotate, float positionX, float positionY, float positionZ, float scaleX, float scaleY, float scaleZ);
+	void DrawColoredMoon(int rotate, float positionX, float positionY, float positionZ, float scaleX, float scaleY, float scaleZ);
 };
-
